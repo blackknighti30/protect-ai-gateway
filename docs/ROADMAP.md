@@ -5,8 +5,8 @@
 - [x] Normalized detection model
 - [x] Protect Smart Detect protocol model
 - [x] Versioned plugin contracts and registry
-- [ ] Gateway event engine
-- [ ] Lifecycle state and deduplication
+- [x] Gateway event engine
+- [x] Lifecycle state and deduplication
 
 ## 0.2 — First vertical slice
 
