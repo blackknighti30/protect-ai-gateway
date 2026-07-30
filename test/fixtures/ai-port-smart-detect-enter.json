@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-07-29T23:30:48.511290519Z",
+  "offset_ms": 283015,
+  "connection_id": "942A6FEC9E2C-1785367563581",
+  "mac_address": "942A6FEC9E2C",
+  "function_name": "EventSmartDetect",
+  "payload": {
+    "clockMonotonic": 3653087,
+    "clockStream": 3653087,
+    "clockStreamRate": 1000,
+    "clockWall": 1785367848123,
+    "descriptors": [
+      {
+        "associatedFaceTrackerID": 13,
+        "attributes": null,
+        "boxColor": "red",
+        "confidenceLevel": 96,
+        "coord": [323, 673, 146, 322],
+        "coord3d": [-1, -1],
+        "firstShownTimeMs": 1785367848040,
+        "idleSinceTimeMs": 0,
+        "lines": [],
+        "loiterZones": [],
+        "name": "",
+        "objectType": "person",
+        "secondLensZones": [],
+        "stationary": false,
+        "tag": "",
+        "trackerID": 10,
+        "zones": []
+      },
+      {
+        "attributes": {
+          "faceMask": { "confidence": 0, "val": "face" }
+        },
+        "boxColor": "red",
+        "confidenceLevel": 76,
+        "coord": [377, 718, 56, 113],
+        "coord3d": [-1, -1],
+        "firstShownTimeMs": 1785367848123,
+        "idleSinceTimeMs": 0,
+        "lines": [],
+        "loiterZones": [],
+        "name": "",
+        "objectType": "face",
+        "secondLensZones": [],
+        "stationary": false,
+        "tag": "face0 ",
+        "trackerID": 13,
+        "zones": [1]
+      }
+    ],
+    "deviceID": "1A11B035DB9D",
+    "displayTimeoutMSec": 245,
+    "edgeType": "enter",
+    "eventId": 1,
+    "objectTypes": ["face"],
+    "smartDetectSnapshotFullFoV": "",
+    "smartDetectSnapshotFullFoVHeight": 0,
+    "smartDetectSnapshotFullFoVWidth": 0,
+    "smartDetectSnapshots": [],
+    "zonesStatus": {
+      "1": { "level": 52, "status": "enter" }
+    }
+  }
+}
