@@ -14,7 +14,7 @@
 
 - [x] Reolink camera plugin
 - [x] Protect output plugin
-- [ ] `secure_transfer` WebSocket transport
+- [x] `secure_transfer` WebSocket transport
 - [ ] AI Port registration and heartbeat
 - [ ] Publish a native Smart Detect event
 
