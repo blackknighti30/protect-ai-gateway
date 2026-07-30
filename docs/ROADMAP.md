@@ -8,6 +8,7 @@
 - [x] Gateway event engine
 - [x] Lifecycle state and deduplication
 - [x] Output plugin SDK
+- [x] Camera plugin SDK
 
 ## 0.2 — First vertical slice
 
