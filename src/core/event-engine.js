@@ -4,6 +4,7 @@ const {
     STATES,
     normalizeDetection
 } = require('../detections/detection');
+const { validateOutputPlugin } = require('../plugins/output/output-plugin');
 
 function detectionKey(detection) {
     return `${detection.cameraId}\u0000${detection.trackerId}`;
@@ -57,22 +58,12 @@ class GatewayEventEngine {
     }
 
     registerOutput(id, output) {
-        if (typeof id !== 'string' || id.trim() === '')
-            throw new TypeError('output id must be a non-empty string');
+        const validated = validateOutputPlugin(id, output);
+        if (this.outputs.has(validated.id))
+            throw new Error(`output is already registered: ${validated.id}`);
 
-        const normalizedId = id.trim();
-        if (!output || typeof output !== 'object')
-            throw new TypeError(`output ${normalizedId} must be an object`);
-        if (typeof output.onDetection !== 'function') {
-            throw new TypeError(
-                `output ${normalizedId} must implement onDetection(detection)`
-            );
-        }
-        if (this.outputs.has(normalizedId))
-            throw new Error(`output is already registered: ${normalizedId}`);
-
-        this.outputs.set(normalizedId, output);
-        return normalizedId;
+        this.outputs.set(validated.id, validated.output);
+        return validated.id;
     }
 
     unregisterOutput(id) {
